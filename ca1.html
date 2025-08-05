@@ -30,30 +30,41 @@
       min-height: 100vh;
     }
 
+    .header,
+    .menu,
+    .hero,
+    .main,
+    .image,
+    .extra,
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
     .header {
       grid-area: header;
       background-color: #000000;
       color: white;
-      padding: 5px 10px; /* ↓ reduced height */
-      text-align: center;    width: 326px;
-
+      padding: 2px 8px;
+      margin-left: -50px; /* Move header a little more to the left */
+      width: 366px;
     }
 
     .menu {
       grid-area: menu;
       background-color: #ff0000;
       color: white;
-      padding: 5px 10px; /* ↓ reduced height */
-      text-align: center;
-          margin-left: -600px;
-
+      padding: 2px 8px;
+      margin-left: -470px;
     }
 
     .hero {
       grid-area: hero;
       background-color: #9adaff;
-      padding: 70px 40px; /* ↑ increased height */
-      text-align: center;
+      padding: 100px 40px;
     }
 
     .main {
@@ -61,7 +72,6 @@
       background-color: #000000;
       color: white;
       padding: 30px;
-      text-align: center;
     }
 
     .space {
@@ -73,23 +83,21 @@
       grid-area: image;
       background-color: #c2f3ff;
       padding: 20px;
-      text-align: center;
-      margin-left: 453px;
+      margin-left: 353px;
     }
 
     .extra {
       grid-area: extra;
       background-color: #00ff2a;
       padding: 20px;
-      text-align: center;
-      margin-left: 453px;
+      margin-left: 353px;
     }
 
     .banner {
       grid-area: banner;
       background-color: #fbff00;
       padding: 30px;
-      text-align: center;
+      color: #222;
     }
 
     /* Responsive layout */
@@ -106,9 +114,12 @@
         grid-template-columns: 1fr;
       }
 
+      .header,
+      .menu,
       .image,
       .extra {
         margin-left: 0;
+        width: 100%;
       }
     }
   </style>
@@ -124,5 +135,3 @@
     <div class="extra">EXTRA</div>
     <footer class="banner">BANNER</footer>
   </div>
-</body>
-</html>
